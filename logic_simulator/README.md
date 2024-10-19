@@ -33,20 +33,18 @@ To run this project, ensure you have Python 3.x installed. Clone the repository 
 ```bash
 git clone https://github.com/Chinoscode111/Foundations_of_VLSI_CAD.git
 cd Foundations_of_VLSI_CAD
+cd logic_simulator
 ```
 
 ## Usage
 
 1. Prepare a text file (e.g., `dff.txt`) containing the Verilog-like description of your digital circuit.
 
-### **How the Netlist Works with Your Liberty File**
-- The Liberty file (`cmos_cells.lib`) you’ve shared defines various standard cells (like BUF, NOT, AND, etc.).
-- During synthesis, Yosys maps your design to these standard cells using `dfflibmap` and `abc`.
-- The final netlist will contain only those gates present in your **Liberty file**. Unrecognized gates will not be included in the output.
+### How to create a txt file containing the Verilog-like description of your digital circuit
 
----
+Write the verilog discription of your circuit in a vrilog file.
 
-### **Command Workflow (Refined Explanation)**
+#### **Command Workflow**
 Here’s an explanation of your Yosys commands and what each does:
 
 ```bash
@@ -86,7 +84,7 @@ yosys
 ---
 
 ```bash
-python your_simulation_script.py
+python simulator.py
 ```
 
 3. Follow the prompts to enter input signals as binary strings (e.g., '01010101') for your inputs.
