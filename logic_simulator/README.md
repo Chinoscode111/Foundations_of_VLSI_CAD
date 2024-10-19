@@ -42,7 +42,7 @@ cd logic_simulator
 
 ### How to create a txt file containing the Verilog-like description of your digital circuit
 
-Write the verilog discription of your circuit in a vrilog file.
+Write the verilog discription of your circuit in a verilog file.
 
 #### **Command Workflow**
 Here’s an explanation of your Yosys commands and what each does:
@@ -78,11 +78,12 @@ yosys
 
 4. **Generate the Verilog netlist:**
    ```verilog
-   write_verilog out2.text
+   write_verilog out2.txt
    ```
 
 ---
 
+### Run Simulator
 ```bash
 python simulator.py
 ```
