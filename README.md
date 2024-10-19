@@ -1,1 +1,1 @@
-## Corese project of EE677:Foundations of VLSI CAD
+## Course project of EE677:Foundations of VLSI CAD
