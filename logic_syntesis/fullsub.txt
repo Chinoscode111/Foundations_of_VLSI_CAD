@@ -1,0 +1,71 @@
+(* top = 1 *)
+(* src = "full_adder.v:1" *)
+module full_subtractor(A, B, Bin, Diff, Bout);
+  wire 00;
+  wire 01;
+  wire 02;
+  wire 03;
+  wire 04;
+  wire 05;
+  wire 06;
+  wire 07;
+  (* src = "full_subtractor.v:2" *)
+  input A;  
+  (* src = "full_subtractor.v:3" *)
+  input B;
+  (* src = "full_subtractor.v:4" *)
+  input Bin;
+  (* src = "full_subtractor.v:5" *)
+  output Diff;
+  (* src = "full_subtractor.v:6" *)
+  output Bout;
+  // XOR gate for difference
+  XOR 08 (
+    .A(A),
+    .B(B),
+    .Y(00)
+  );
+ 
+  XOR 09 (
+    .A(00),
+    .B(Bin),
+    .Y(01)
+  );
+ 
+  NOT 10 (
+    .A(A),
+    .Y(02)
+  );
+ 
+  AND 11 (
+    .A(02),
+    .B(B),
+    .Y(03)
+  );
+ 
+  AND 12 (
+    .A(02),
+    .B(Bin),
+    .Y(04)
+  );
+ 
+  AND 13 (
+    .A(B),
+    .B(Bin),
+    .Y(05)
+  );
+ 
+  OR 14 (
+    .A(03),
+    .B(04),
+    .Y(06)
+  );
+ 
+  OR 15 (
+    .A(06),
+    .B(05),
+    .Y(07)
+  );
+  assign Bout = 07;
+  assign Diff = 01;
+endmodule
